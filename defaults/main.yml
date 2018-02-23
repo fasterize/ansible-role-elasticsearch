@@ -21,6 +21,8 @@ elasticsearch:
   limits:
     nofile_soft: 65535
     nofile_hard: 65535
+    nproc_soft: 4096
+    nproc_hard: 4096
 
   packages:
     - curl

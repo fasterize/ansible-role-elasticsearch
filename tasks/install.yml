@@ -16,9 +16,9 @@
   include: install/2.x.yml
   when: elasticsearch.family == '2.x'
 
-- name: Install 5.x Family
-  include: install/5.x.yml
-  when: elasticsearch.family == '5.x'
+- name: Install 5.x+ Family
+  include: install/5.x.plus.yml
+  when: elasticsearch.family != '1.x' and elasticsearch.family != '2.x'
 
 - name: Ensure some required directories
   become: yes
